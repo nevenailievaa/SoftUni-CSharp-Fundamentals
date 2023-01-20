@@ -19,12 +19,15 @@ for (int i = 1; i <= inputNumber; i++)
 
     if (digitsSum == 5 || digitsSum == 7 || digitsSum == 11)
     {
+        //OUTPUT
         Console.WriteLine($"{i} -> True");
     }
     else
     {
+        //OUTPUT
         Console.WriteLine($"{i} -> False");
     }
-
+    
+    //Restore Data
     digitsSum = 0;
 }
