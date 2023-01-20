@@ -4,6 +4,7 @@ int inputNumber = int.Parse(Console.ReadLine());
 //CHANGEABLE
 int digitsSum = 0;
 
+//ACTION
 for (int i = 1; i <= inputNumber; i++)
 {
     int currentNumber = i;
