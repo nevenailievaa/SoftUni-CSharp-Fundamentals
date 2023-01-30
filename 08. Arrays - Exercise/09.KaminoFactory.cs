@@ -13,7 +13,7 @@ int bestCnt = 0;
 //Sum:
 int currentSum = 0;
 int bestSum = 0;
-//Index::
+//Index:
 int bestIndex = 0;
 int currentIndex = 0;
 
