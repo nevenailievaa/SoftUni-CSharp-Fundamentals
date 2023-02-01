@@ -7,8 +7,8 @@ int[] outputArray = new int[n];
 //ACTION
 for (int i = 0; i < n; i++)
 {
-	string inputString = Console.ReadLine();
-	char[] inputArrayChar = new char[inputString.Length];
+    string inputString = Console.ReadLine();
+    char[] inputArrayChar = new char[inputString.Length];
 
     //Sums Restart
     int vowelsSum = 0;
@@ -17,8 +17,8 @@ for (int i = 0; i < n; i++)
 
     //String To Char Array Convert
     for (int k = 0; k < inputString.Length; k++)
-	{
-		inputArrayChar[k] = inputString[k];
+    {
+	inputArrayChar[k] = inputString[k];
     }
 
     //Word Letters Checker
