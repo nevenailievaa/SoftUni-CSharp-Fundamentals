@@ -46,5 +46,3 @@ for (int o = 0; o < n; o++)
 {
     Console.WriteLine(outputArray[o]);
 }
-
-
