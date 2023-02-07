@@ -25,14 +25,12 @@ public class Program
     }
 
     //ACTION
-    static double FirstPointCoordinates(double x1, double y1)
+    static double FirstPointCoordinates(double firstNum, double secondNum)
     {
-        double pointsSum = Math.Abs(x1) + Math.Abs(y1);
-        return pointsSum;
+        return Math.Abs(firstNum) + Math.Abs(secondNum);
     }
-    static double SecondPointCoordinates(double x2, double y2)
+    static double SecondPointCoordinates(double firstNum, double secondNum)
     {
-        double pointsSum = Math.Abs(x2) + Math.Abs(y2);
-        return pointsSum;
+        return Math.Abs(firstNum) + Math.Abs(secondNum);
     }
 }
