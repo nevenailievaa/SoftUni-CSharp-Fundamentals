@@ -25,6 +25,5 @@ while ((command = Console.ReadLine()) != "end")
 		}
 	}
 }
-
 //OUTPUT
 Console.Write(string.Join(" ", wagons));
