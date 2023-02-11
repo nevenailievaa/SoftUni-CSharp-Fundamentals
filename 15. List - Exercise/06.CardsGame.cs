@@ -44,5 +44,5 @@ else if (secondPlayerCards.Count == 0)
     {
         winnerCardsSum += firstPlayerCards[k];
     }
-    Console.WriteLine($"Second player wins! Sum: {winnerCardsSum}");
+    Console.WriteLine($"First player wins! Sum: {winnerCardsSum}");
 }
