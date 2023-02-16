@@ -1,4 +1,4 @@
-﻿//INPUT
+//INPUT
 int numberCommands = int.Parse(Console.ReadLine());
 List<string> guests = new List<string>();
 
@@ -34,7 +34,7 @@ for (int i = 0; i < numberCommands; i++)
     }
 }
 //OUTPUT
-for (int k = 0; k < numberCommands; k++)
+foreach (string name in guests)
 {
-    Console.WriteLine(guests[k]);
+    Console.WriteLine(name);
 }
