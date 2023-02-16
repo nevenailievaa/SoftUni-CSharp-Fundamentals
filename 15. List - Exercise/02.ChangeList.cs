@@ -1,4 +1,4 @@
-namespace ConsoleApp1
+namespace ChangeList
 {
     using System;
     using System.Collections.Generic;
