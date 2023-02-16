@@ -1,9 +1,10 @@
-﻿//INPUT
+//INPUT
 List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
 
 //ACTION
 string command = string.Empty;
 bool madeChanges = false;
+
 while ((command = Console.ReadLine()) != "end")
 {
     if (command.Contains("Add") == true)
@@ -60,40 +61,39 @@ while ((command = Console.ReadLine()) != "end")
     }
     else if (command == "PrintEven")
     {
+        List<int> evenNumbersList = new List<int>();
         for (int i = 0; i < numbers.Count; i++)
         {
             if (numbers[i] % 2 == 0)
             {
-                Console.Write($"{numbers[i]} ");
+                evenNumbersList.Add(numbers[i]);
             }
         }
-        Console.WriteLine();
+        Console.WriteLine(String.Join(" ", evenNumbersList));
     }
     else if (command == "PrintOdd")
     {
+        List<int> oddNumbersList = new List<int>();
         for (int i = 0; i < numbers.Count; i++)
         {
             if (numbers[i] % 2 == 1)
             {
-                Console.Write($"{numbers[i]} ");
+                oddNumbersList.Add(numbers[i]);
             }
         }
-        Console.WriteLine();
+        Console.WriteLine(String.Join(" ", oddNumbersList));
     }
     else if (command == "GetSum")
     {
-        int numsSum = 0;
-        for (int i = 0; i < numbers.Count; i++)
-        {
-            numsSum += numbers[i];
-        }
-        Console.WriteLine(numsSum);
+        Console.WriteLine(numbers.Sum());
     }
     else if (command.Contains("Filter") == true)
     {
         string[] commandArray = command.Split();
         string condition = commandArray[1];
         int value = int.Parse(commandArray[2]);
+
+        List<int> conditionNumbersList = new List<int>();
 
         //Return Value
         if (condition == "<")
@@ -102,7 +102,7 @@ while ((command = Console.ReadLine()) != "end")
             {
                 if (numbers[i] < value)
                 {
-                    Console.Write($"{numbers[i]}");
+                    conditionNumbersList.Add(numbers[i]);
                 }
             }
         }
@@ -112,7 +112,7 @@ while ((command = Console.ReadLine()) != "end")
             {
                 if (numbers[i] > value)
                 {
-                    Console.Write($"{numbers[i]}");
+                    conditionNumbersList.Add(numbers[i]);
                 }
             }
         }
@@ -122,10 +122,9 @@ while ((command = Console.ReadLine()) != "end")
             {
                 if (numbers[i] >= value)
                 {
-                    Console.Write($"{numbers[i]} ");
+                    conditionNumbersList.Add(numbers[i]);
                 }
             }
-            Console.WriteLine();
         }
         else if (condition == "<=")
         {
@@ -133,10 +132,11 @@ while ((command = Console.ReadLine()) != "end")
             {
                 if (numbers[i] <= value)
                 {
-                    Console.Write($"{numbers[i]}");
+                    conditionNumbersList.Add(numbers[i]);
                 }
             }
         }
+        Console.WriteLine(String.Join(" ", conditionNumbersList));
     }
 }
 
