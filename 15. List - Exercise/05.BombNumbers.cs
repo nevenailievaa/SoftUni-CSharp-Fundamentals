@@ -1,52 +1,58 @@
-﻿//INPUT
-List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
-string[] bombAndPower = Console.ReadLine().Split();
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-//ACTION
-int bomb = Convert.ToInt32(bombAndPower[0].ToString());
-int power = Convert.ToInt32(bombAndPower[1].ToString());
-
-//Bomb Finder
-int bombIndex;
-int bombsCount = 0;
-
-for (int i = 0; i < numbers.Count; i++)
+namespace _05._Bomb_Numbers
 {
-	if (numbers[i] == bomb)
-	{
-		//Left Side
-		for (int j = i; j >= i - power; j--)
-		{
-			if (j < 0)
-			{
-				break;
-			}
-			else
-			{
-				numbers.RemoveAt(j);
-			}
-		}
-        //Right Side
-        for (int k = i-power; k < i; k++)
+    internal class Program
+    {
+        static void Main(string[] args)
         {
-            if (k >= numbers.Count)
+            List<int> numList = Console.ReadLine()
+                .Split()
+                .Select(int.Parse)
+                .ToList();
+
+            int[] bombNum = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+            int originalCount = numList.Count;
+
+            for (int i = 0; i < numList.Count; i++)
             {
-                break;
+                if (numList[i] == bombNum[0])
+                {
+                    int originalJ = i - bombNum[1];
+
+                    if (originalJ < 0)
+                    {
+                        originalJ = 0;
+                    }
+
+                    for (int j = originalJ; j <= (bombNum[1] * 2) + originalJ; j++)
+                    {
+                        if (originalJ >= numList.Count)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            numList.RemoveAt(originalJ);
+                        }
+                        
+                    }
+
+                    i = 0;
+                }
             }
-            else
+
+            int sum = 0;
+
+            foreach (int item in numList)
             {
-                numbers.RemoveAt(k);
+                sum += item;
             }
+
+            Console.WriteLine(sum);
         }
     }
 }
-
-//Remaining Numbers Sum
-int numsSum = 0;
-for (int s = 0; s < numbers.Count; s++)
-{
-	numsSum += numbers[s];
-}
-
-//OUTPUT
-Console.WriteLine(numsSum);
