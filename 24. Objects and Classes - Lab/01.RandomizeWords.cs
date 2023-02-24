@@ -1,5 +1,5 @@
 ﻿//INPUT
-string[] words = Console.ReadLine().Split().ToArray();
+string[] words = Console.ReadLine().Split();
 
 //ACTION
 for (int i = 0; i < words.Length - 1; i++)
