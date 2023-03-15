@@ -32,3 +32,9 @@ if (overflowNum != 0)
 }
 
 Console.WriteLine(result);
+
+//You are given two lines – the first one can be a really
+//big number (0 to 1050). The second one will be a single-digit
+//number (0 to 9). Your task is to display the product of these numbers.
+
+//Note: do not use the BigInteger class.
