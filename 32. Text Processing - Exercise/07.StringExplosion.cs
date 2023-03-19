@@ -33,3 +33,6 @@ for (int i = 0; i < currentString.Length; i++)
 
 //OUTPUT
 Console.WriteLine(currentString);
+
+//Explosions are marked with '>'. Immediately after the mark,
+//there will be an integer, which signifies the strength of the explosion.
