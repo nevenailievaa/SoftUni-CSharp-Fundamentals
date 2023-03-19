@@ -24,3 +24,7 @@ foreach (var character in notRepeatedChars)
 {
 	Console.Write(character);
 }
+
+//Create a program that reads a string from the
+//console and replaces any sequence of the same letter
+//with a single corresponding letter.
