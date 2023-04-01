@@ -66,6 +66,7 @@ while ((command = Console.ReadLine()) != "End")
     }
 }
 
+//OUTPUT
 if (cityAndPopulation.Count == 0)
 {
     Console.WriteLine($"Ahoy, Captain! All targets have been plundered and destroyed!");
