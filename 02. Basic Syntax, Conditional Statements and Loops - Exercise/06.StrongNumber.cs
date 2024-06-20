@@ -16,7 +16,7 @@ while (numberCopy > 0)
         factorial *= i;
     }
 
-    sum *= factorial;
+    sum += factorial;
 }
 
 if (sum == number)
